@@ -1,0 +1,46 @@
+@import 'config';
+
+.layout {
+    background-color: #e5e5e5;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    border-radius: 25px;
+    width: 400px;
+    padding: 35px 25px;
+    margin: 20px;
+    background-color: white; 
+    display: flex;
+    flex-direction: column;  
+}
+
+.head {
+    margin-bottom: 55px;
+}
+
+.input-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #756F86;
+    padding-bottom: 40px;
+
+    input {
+        width: 28px;
+        height: 28px;
+        border: 1px solid #DBE2EA;
+        box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+        border-radius: 4px;
+        appearance: none;
+        cursor: pointer;
+        &:checked {
+            border: 2px solid #0880AE;
+            background-image: url('../media/check.svg');
+            background-size: 24px 24px; 
+        }
+    }
+}
+

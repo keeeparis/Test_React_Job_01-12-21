@@ -1,0 +1,20 @@
+.button {
+    background-color: #DBE2EA;
+    font-family: 'IBM Plex Sans', sans-serif;
+    border-radius: 6px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 0;
+    line-height: 20px;
+    color: #B1B5BF;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.08), 0px 4px 8px rgba(44, 39, 56, 0.08);
+}
+
+.active {
+    background-color: #0880AE;
+    cursor: pointer;
+    color: #EBF4F8
+}
