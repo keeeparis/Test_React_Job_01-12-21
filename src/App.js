@@ -8,34 +8,29 @@ export default function App() {
     const [enableSendForm, setEnableSendForm] = useState(false)
     const [errors, setErrors] = useState({})
 
-    useEffect(() => 
-        (data.name.length && data.email.length && data.tel.length && data.lang.length && data.rules)
-        ?   setEnableSendForm(true)
-        :   setEnableSendForm(false)
-    , [data])
-
+    
     const handleSubmit = (e) => {
         e.preventDefault()
-
+        
         let flag = false
         let err = {}
         setErrors({})
-
+        
         if (!data.name.match(/^[а-яА-Яa-zA-Z- ]*$/)) {
             err.name = true
             flag = true
         }
-
+        
         if (!data.email.match(/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/)) {
             err.email = true
             flag = true
         }
-
+        
         if (!data.tel.match(/^[+]?\d?[(]?[-]?\d{1,3}[)]?[-]?(?:\d{3}[-]?\d{2}[-]?\d{2}|\d{7})$/)) {
             err.tel = true
             flag = true
         }
-
+        
         if (!flag) {
             alert('Регистрация прошла успешно')
             // Здесь через реакт-роутер-дом можно перекинуть пользователя, например, на главную страницу или личный кабинет
@@ -45,6 +40,12 @@ export default function App() {
         }
     }
 
+    useEffect(() => {
+        (data.name.length && data.email.length && data.tel.length && data.lang.length && data.rules)
+        ?   setEnableSendForm(true)
+        :   setEnableSendForm(false)
+    }, [data])
+    
     return (
         <div className='layout'>
             <div className='card'>
